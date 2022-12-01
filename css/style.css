@@ -551,15 +551,23 @@ div#slogan{
   main {
     padding-right: 4%;
   }
+
 }
 
 @media screen and (max-width: 428px) {
+
+ 
   header {
     position:absolute;
-    bottom: 0%;
-    width: 100%;
+    bottom: 3%;
+    right: 4%;
+    width: 45%;
     height: 5%;
     z-index: 1;
+    border-radius: 25px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+
   }
   main {
     height: 100%;
@@ -612,7 +620,7 @@ div#slogan{
     
   
 .logo{
-  width: 60%;
+  width: 50%;
   margin: 17% 0 10% auto;
 }
 .container p {
@@ -625,7 +633,7 @@ div#slogan{
   margin-top: 35px;
 }
   main .right p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .field {
     margin-bottom: 6px;
@@ -633,7 +641,7 @@ div#slogan{
     padding: 6px;
   }
   footer ul li a{
-    padding: 10px 0 10px 10px;
+    padding: 7px 0 7px 5px;
   }
     #copyright {
     font-size: 10px;
