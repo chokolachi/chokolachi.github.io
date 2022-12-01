@@ -1,0 +1,739 @@
+*{
+  box-sizing: border-box;
+  
+}
+@font-face {
+  font-family: 'raleway';
+  src: url(../fonts/raleway.ttf);
+}
+
+a{
+  text-decoration: none;
+}
+
+#slogan a {
+  color: #fff;
+  opacity: 100%;
+}
+body {
+  background-color: #936EB6;
+}
+
+/* :::::::::: Animation :::::::::: */
+
+/* :::::::::: Bottom left circle ::::::::: */
+
+.quarter2, .quarter3 {
+  position: absolute;
+  bottom: 6%;
+  left: 6%;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+}
+
+.quarter2 {
+  background-color: rgb(235, 194, 147);
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 100%;
+  transform: translateY(15px);
+  border-right: 2px solid #615d6c;
+  border-bottom: 2px solid #615d6c;
+  
+}
+.quarter3 {
+  background-color: #fff;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 0%;
+  transform: translatex(-15px);
+  border-top: #615d6c solid 2px;
+  border-left: #615d6c solid 2px;
+}
+
+.tquarter {
+  position: absolute;
+  bottom: 6%;
+  left: 6%;
+  z-index: 1;
+  animation: rotar 5s linear 0s infinite normal;
+}
+
+@keyframes rotar{
+  0%   {transform: rotate(0);}
+  100% {transform: rotate(360deg);} 
+}
+
+
+/* :::::::::: rectangle RIGHT PART :::::::::: */
+
+.rect1 {
+  width: 3%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left:6%;
+  bottom: 6%;
+  opacity: 0%;
+  z-index: 1;
+  animation: hbottom 2s ease-in 1 normal;
+
+}
+
+@keyframes hbottom {
+  0% {opacity: 10%;}
+  99% {opacity: 70%; left: 94%;}
+  100% {opacity: 0%; left: 94%;}
+}
+
+.rect2 {
+  width: 1px;
+  height: 6%;
+  background-color: #fff;
+  position: absolute;
+  right:3%;
+  bottom: 6%;
+  opacity: 0%;
+  z-index: 1;
+  animation: vright 3s linear 2s 1 normal;
+
+}
+
+@keyframes vright {
+  0% {opacity: 70%;}
+  17% {opacity: 0%;}
+  80% {opacity: 0%;}
+  99% {opacity: 70%; bottom: 87%;}
+  100% {opacity: 0%; bottom: 87%;}
+}
+
+/* :::::::::: LEFT PART :::::::::: */
+.rect3 {
+  width: 3%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left:6%;
+  top: 6%;
+  opacity: 0%;
+  z-index: 1;
+  animation: htop 2s linear 3s 1 normal;
+}
+
+@keyframes htop {
+  0% {opacity: 70%;}
+  99% {opacity: 70%; left: 94%;}
+  100% {opacity: 0%; left: 94%;}
+}
+
+.rect4 {
+  width: 1px;
+  height: 6%;
+  background-color: #fff;
+  position: absolute;
+  left:6%;
+  bottom: 6%;
+  opacity: 0%;
+  z-index: 1;
+  animation: vleft 3s linear 1 normal;
+
+}
+
+@keyframes vleft {
+  0% {opacity: 10%;}
+  99% {opacity: 70%; bottom: 87%;}
+  100% {opacity: 0%; bottom: 87%;}
+}
+
+/* :::::::::: Code for index :::::::::: */
+
+#wrapper{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo-outside{
+  position: fixed;
+  top: 6%;
+  right: 3%;
+  width: 60px;
+  z-index: 1;
+  padding: 7px;
+  border: 1px rgba(255, 255, 255, 0.7) solid;
+  border-bottom: transparent;
+  border-left: transparent;
+  box-sizing: content-box;
+  fill: #936EB6;
+  opacity: 0%;
+  animation: showlogo 10s ease 5s 1 normal;
+}
+
+@keyframes showlogo {
+  0% {opacity: 100%; }
+  100% {opacity: 100%; }
+}
+
+.logo-outside:hover {  
+  transform:translateX(2px);
+  opacity: 100%;
+}
+
+header {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  height: 100vh;
+  width: 3%;
+  background-color: #615d6c;
+  opacity: 97%;
+  z-index: 3;
+}
+
+header ul {
+  position: relative;
+}
+
+header ul li{
+  position: relative;
+  display: flex;  
+}
+
+header ul li a{
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  padding: 10px 0;
+  opacity: 70%;
+  margin: auto;
+}
+
+header ul li a:hover{
+  color: #936EB6;
+  opacity: 97%;   
+  transition: .5s;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 97%;
+  padding: 3%;
+}
+
+/*
+.bag, .basket, .bottle, .feather, .gem, .cake, .shirt, .gift, .moon, .star, .shopify, .brush {
+  position: absolute;
+  font-size: 500%;
+  color: #fff;
+  opacity: 0.1;
+}
+
+.bag {top: 6%;}
+.feather {top: 24%;}
+.bottle {top: 42%;}
+.basket {top: 60%;}
+.gem {top: 78%;}
+.cake {top: 6%; left: 18%;}
+.shirt {top: 24%;left: 18%;}
+.moon {top: 42%;left: 18%}
+.gift {top: 60%;left: 18%}
+.shopify {top: 78%;left: 18%}
+.star {top: 6%;left: 30%}
+.brush {top: 24%;left: 30%}
+
+*/
+
+#rand {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  font-size: 143px;
+  color: #fff;
+  letter-spacing: 10px;
+}
+
+.basket, .bottle, .feather, .cake, .star, .moon, .brush {
+  margin-bottom: 20px;
+  opacity: 0.04;
+}
+
+.bag,  .gem, .shirt, .gift,  .shopify {
+  opacity: 0.1;
+}
+
+.container {
+  width: 100%;
+  margin-top: -17%;
+}
+
+.logo{
+  width: 30%;
+  display: flex;
+  margin: 17% 0 3.5% auto;
+  filter: opacity(1);
+}
+
+#line {
+  width: 6%;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 0 0 auto;
+  display: flex;
+}
+
+.container p {
+  font-family: 'raleway';
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: right;
+  line-height: 1.5em;
+  letter-spacing: normal;
+  margin-top: 35px;
+}
+
+footer {
+  display:flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+}
+
+footer ul {
+  position: relative;
+  display: flex;
+}
+
+footer ul li{
+  position: relative;
+  display: flex;
+}
+
+footer ul li a{
+  font-size: 23px;
+  color: #fff;
+  display: flex;
+  padding: 25px 0 25px 15px;
+}
+
+footer ul li a:hover{  
+  opacity: 50%;   
+  transition: .5s;
+}
+
+#copyright{
+  margin-top: -.1%;
+  text-transform: none;
+  letter-spacing: normal;
+  font-family: 'raleway';
+  color: #fff;
+  font-family: 'raleway';
+  font-size: 13px;
+  text-align: right;
+  line-height: 1.5em;
+  letter-spacing: 1.2px;
+}
+
+#copyright a{
+  color: rgb(235, 194, 147);
+}
+
+#copyright a:hover{
+  color: orange;
+}
+
+/* :::::::::: Contact ::::::::::: */
+
+.big-container {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+
+.small-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  flex-direction: row;
+}
+
+.small-container img {
+  border-radius: 10%;
+}
+
+.contact-box{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  
+}
+
+.right{
+	padding: 0 0 0 40px;
+}
+
+h1{
+  font-family: 'raleway';
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+  text-align: right;
+  font-size: 20px;
+  color: #fff;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 18px;
+	transition: .3s;
+  text-align: right;
+  font-family: 'raleway';
+}
+
+.field:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+  
+}
+
+textarea{
+	min-height: 125px;
+  font-family: 'raleway';
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #615d6c;
+  text-align: right;
+  font-family: 'raleway';
+	color: #fff;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+  opacity: 60%;  
+}
+
+.btn:hover{
+    opacity: 100%;
+}
+
+.field:focus{
+    border: 2px solid rgba(255, 255, 255, 0.47);
+    background-color: #fff;
+}
+
+/* :::::::::: About ::::::::::: */
+
+main .right p {
+  font-family: 'raleway';
+  font-size: 17px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.5em;
+  letter-spacing: normal;
+}
+
+main .right p a{
+  color: rgb(235, 194, 147);
+}
+
+main .right p a:hover{
+  color: orange;
+}
+
+div#slogan{
+  position: absolute;
+  top: 6%;
+  left:6%;
+  text-align: left;
+  color: #fff;
+  font-family: 'raleway';
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* :::::::::: Top selling :::::::::: */
+
+
+.small-container {
+  vertical-align: middle;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.small-container img {
+  flex: 100%;
+  width: 100%;
+  padding: 0 4px;
+  vertical-align: middle;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+  filter: saturate(7%);
+}
+
+.small-container img:hover {
+  transform:translateY(3px);
+  filter: saturate(97%);
+}
+
+/* :::::::::: RESPONSIVE ::::::::: */
+
+@media screen and (max-width: 900px){
+
+  header ul li a{
+    font-size: 17px;
+  }
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 100px;
+	}
+  .small-container {
+    display: inline-block;
+    text-align: right;
+  }
+  .small-container img {
+    max-width: 19%;
+    padding: 4px 0 4px 4px;
+}
+
+.logo-outside{
+  display: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 4%;
+  }
+  div#slogan{
+    top: 3%;
+    left: 8%;
+  }
+
+  .tquarter {
+    bottom: 3%;
+    left: 8%;
+  }
+  
+ .rect2, .rect3, .rect1, .rect4 {
+  display: none;
+  }
+  main {
+    padding-right: 4%;
+  }
+
+}
+
+@media screen and (max-width: 428px) {
+
+  header {
+    position:absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 5%;
+    z-index: 1;
+  }
+  main {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header ul li a{
+    margin: 0 10px;
+    font-size: 20px;
+  }
+
+  div#slogan{
+    top: 1.5%;
+    left: 3%;
+  }
+  .container {
+    text-align: center;
+  }
+  .quarter2, .quarter3 {
+    display:none;
+  }
+  .left {
+    height: 60px;
+  }
+  main .right p {
+    font-size: 15px;
+  }
+  
+  footer ul li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .small-container img {
+    max-width: 30%;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  
+  header ul li a{
+    font-size: 18px;
+  }
+    
+  
+.logo{
+  width: 60%;
+  margin: 17% 0 10% auto;
+}
+.container p {
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: right;
+  line-height: 1.5em;
+  letter-spacing: normal;
+  margin-top: 35px;
+}
+  main .right p {
+    font-size: 15px;
+  }
+  .field {
+    margin-bottom: 6px;
+    font-size:16px;
+    padding: 6px;
+  }
+  footer ul li a{
+    padding: 10px 0 10px 10px;
+  }
+    #copyright {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:320px){
+  main .right p {
+    font-size: 12px;
+  }
+  #copyright {
+    font-size: 10px;
+  }
+  .left {
+    height: 20px;
+  }
+  header ul li a{
+    font-size: 15px;
+  }
+  .field {
+    margin-bottom: 5px;
+    font-size:15px;
+    padding: 3px;
+  }
+  
+}
+  
+/* :::::::::: Landscape :::::::::: */
+@media screen and (max-width: 926px) and (orientation: landscape) {
+  .small-container img {
+    width: 100%;
+    padding: 0 4px;   
+  }
+  
+  main .right p {
+    font-size: 12px;
+    line-height: 1.2em;
+    letter-spacing: normal;
+  }
+
+  .field{
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  textarea{
+    min-height: 100px;
+    font-family: 'raleway';
+  }
+  
+  .btn{
+    font-size: 12px;
+  }
+
+  main .right {
+    padding-right: 0px;
+  }
+  .left{
+		height: 50px;
+	}
+  main {
+    justify-content: right;
+    margin-right: 3%;
+  }
+  .rect1, .rect2, .rect3, .rect4 {
+    display: none;
+  }
+
+  footer ul li {
+    margin: -5px 0 -10px;
+  }
+}
+
+
+@media screen and (max-width: 915px) and (orientation: landscape) {
+  .field{
+    padding: 5px;
+  }
+  
+  textarea{
+    min-height: 50px;
+    font-family: 'raleway';
+  }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+  #slogan p{
+    line-height: 10px;
+    font-size: 10px;
+  }
+  #copyright {
+    font-size: 10px;
+  }
+  footer ul li a {
+    padding: 15px 0 15px 10px;
+  }
+}
+
+.tquarter {
+  bottom: 6%;
+}
