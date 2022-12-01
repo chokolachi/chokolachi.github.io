@@ -551,11 +551,9 @@ div#slogan{
   main {
     padding-right: 4%;
   }
-
 }
 
 @media screen and (max-width: 428px) {
-
   header {
     position:absolute;
     bottom: 0%;
