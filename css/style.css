@@ -566,7 +566,8 @@ div#slogan{
  
   header {
     position:fixed;
-    bottom: 6%;
+    top: 1.5%;
+    right: 4%;
     width: auto;
     height: auto;
     z-index: 1;
